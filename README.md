@@ -60,6 +60,7 @@ pip install -r requirements.txt
 
 # Run server
 uvicorn main:app --reload
+```
 
 📫 Notifications
 Choose one or both:
@@ -70,11 +71,13 @@ Telegram: Alert via a Telegram bot using Bot API
 
 Configure credentials using environment variables:
 
+```bash
 MATRIX_TOKEN=your_matrix_access_token
 MATRIX_ROOM_ID=!abc123:matrix.org
 
 BOT_TOKEN=your_telegram_bot_token
 CHAT_ID=your_telegram_chat_id
+```
 
 🧠 Idea
 “Why install a doorbell when everyone already has a smartphone?”

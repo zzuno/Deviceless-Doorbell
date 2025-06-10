@@ -86,3 +86,5 @@ This project rethinks the doorbell with software and QR tech. Perfect for office
 
 ## 🤝 Contributing
 Contributions, feature ideas, and feedback are welcome!
+
+Made with 🦀 by @zzuno

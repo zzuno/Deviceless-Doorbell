@@ -62,7 +62,7 @@ pip install -r requirements.txt
 uvicorn main:app --reload
 ```
 
-📫 Notifications
+## 📫 Notifications
 Choose one or both:
 
 Matrix: Send to your personal Element chatroom using doorbell_bot
@@ -79,10 +79,10 @@ BOT_TOKEN=your_telegram_bot_token
 CHAT_ID=your_telegram_chat_id
 ```
 
-🧠 Idea
+## 🧠 Idea
 “Why install a doorbell when everyone already has a smartphone?”
 
 This project rethinks the doorbell with software and QR tech. Perfect for offices, shared housing, or minimalists who love frictionless design.
 
-🤝 Contributing
+## 🤝 Contributing
 Contributions, feature ideas, and feedback are welcome!

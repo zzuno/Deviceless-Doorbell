@@ -4,6 +4,8 @@
 
 ![QR Code](./assets/img1.png)
 
+> An Example QR code. You scan it, then you get notification.
+
 ## 📌 Overview
 
 **Deviceless Doorbell** is a minimalist, hardware-free smart doorbell system.  

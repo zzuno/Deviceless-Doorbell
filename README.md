@@ -2,7 +2,7 @@
 ## A doorbell for the broke and the bold – just scan the QR, we’re living in 2025.
 > A device-free, QR-based smart doorbell — just scan and notify!
 
-![QR Code](./assets/img1.png)
+![QR Code](./assets/img2.png)
 
 > An Example QR code. You scan it, then you get notification.
 

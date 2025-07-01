@@ -17,38 +17,21 @@ def notify():
     # 알림용 토큰
     bot_token     = os.environ.get('BOT_TOKEN')
     chat_id       = os.environ.get('CHAT_ID')
-    access_token  = os.environ.get('MATRIX_TOKEN')
-    room_id       = os.environ.get('MATRIX_ROOM_ID')
-
-    # 연락처 정보
+  
     contact_name  = os.environ.get('CONTACT_NAME', '연락처')
     contact_phone = os.environ.get('CONTACT_PHONE', '010-0000-0000')
 
     # 필수 정보 체크
     if not bot_token or not chat_id:
         return 'Missing credentials', 500
-    if not access_token or not room_id:
-        return 'Missing Matrix credentials', 500
-
     # Telegram 메시지 전송
     tg_url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
     tg_data = {"chat_id": chat_id, "text": "🚪 누군가 문 앞에서 기다리고 있어요!"}
-
-    # Matrix 메시지 전송
-    matrix_api = (
-        f"https://matrix-client.matrix.org/_matrix/client/r0/rooms/"
-        f"{room_id}/send/m.room.message?access_token={access_token}"
-    )
-    matrix_msg = {"msgtype": "m.text", "body": "🚪 누군가 문 앞에서 기다리고 있어요!"}
 
     try:
         r1 = requests.post(tg_url, data=tg_data)
         if r1.status_code != 200:
             return f"Telegram Error {r1.status_code}: {r1.text}", 500
-
-        r2 = requests.post(matrix_api, json=matrix_msg)
-        if r2.status_code != 200:
-            return f"Matrix Error {r2.status_code}: {r2.text}", 500
 
     except Exception as e:
         return f"Exception during request: {e}", 500

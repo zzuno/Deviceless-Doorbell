@@ -86,7 +86,7 @@ def notify():
       <h1>🔔 방문 요청이 접수되었습니다.</h1>
       <p>혹시 저희가 부재 중이라면<br>아래 연락처로 연락을 남겨주시면 빠르게 도움드리겠습니다.</p>
       <p class="contact">{contact_name}: <a href="tel:{contact_phone.replace('-', '')}">{contact_phone}</a></p>
-      <a class="call-button" href="tel:{contact_phone.replace('-', '')}">지금 전화 걸기</a>
+      <a class="call-button" href="sms:{{ contact_phone|replace('-', '') }}">문자 보내기</a>
     </body>
     </html>
     """
